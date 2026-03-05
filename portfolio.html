@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description"
+        content="Articulate Vision Portfolio - Case studies and successful projects in digital marketing, custom software, and workflow automation." />
+    <meta name="keywords" content="portfolio, case studies, digital projects, software development projects" />
+    <title>Portfolio & Case Studies | Articulate Vision</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8b5cf6",
+                        secondary: "#ec4899",
+                        accent: "#06b6d4",
+                        "background-light": "#fdfdfd",
+                        "background-dark": "#050505",
+                    },
+                    fontFamily: {
+                        display: ["Montserrat", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #ec4899, #8b5cf6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, rgba(5, 5, 5, 0) 70%);
+        }
+
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .portfolio-card {
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+        }
+
+        .card-glow-purple:hover {
+            box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
+            border-color: rgba(168, 85, 247, 0.5);
+        }
+
+        .card-glow-pink:hover {
+            box-shadow: 0 0 30px rgba(236, 72, 153, 0.4);
+            border-color: rgba(236, 72, 153, 0.5);
+        }
+
+        .card-glow-cyan:hover {
+            box-shadow: 0 0 30px rgba(6, 182, 212, 0.4);
+            border-color: rgba(6, 182, 212, 0.5);
+        }
+
+        .art-dots {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(236, 72, 153, 0.18) 0.7px, transparent 0.7px);
+            background-size: 20px 20px;
+            pointer-events: none;
+            opacity: 0.45;
+        }
+
+        .portfolio-card .aspect-video {
+            position: relative;
+            isolation: isolate;
+        }
+
+        .portfolio-card .aspect-video::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(140deg, rgba(236, 72, 153, 0.2), rgba(139, 92, 246, 0.08), rgba(6, 182, 212, 0.22));
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-40 border-b border-slate-200/10 bg-background-light/80 dark:bg-background-dark/80 nav-blur">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex items-center gap-3 group">
+                    <img src="/assets/images/logo.svg" alt="Articulate Vision Logo" class="w-10 h-10 transition-transform group-hover:scale-110">
+                    <div class="leading-tight hidden sm:block">
+                        <div class="font-bold tracking-widest text-sm dark:text-white">ARTICULATE</div>
+                        <div class="text-[10px] tracking-[0.2em] text-slate-500 dark:text-slate-400">VISION</div>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors cursor-pointer" href="/">Home</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors cursor-pointer" href="/services.html">Services</a>
+                    <a class="text-sm font-medium text-primary cursor-pointer" href="/portfolio.html">Portfolio</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors cursor-pointer" href="/contact.html">Contact</a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 text-slate-600 dark:text-slate-300 hover:text-primary transition-colors cursor-pointer">
+                        <span class="material-icons-outlined">light_mode</span>
+                    </button>
+                    <button class="md:hidden p-2 text-slate-600 dark:text-slate-300 cursor-pointer">
+                        <span class="material-icons-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20">
+
+        <!-- Hero Section -->
+        <section class="relative min-h-[400px] flex items-center overflow-hidden mb-20">
+            <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] hero-glow pointer-events-none"></div>
+            <div class="art-dots"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-center py-20">
+                <h1 class="text-5xl md:text-6xl font-black font-display mb-6 tracking-tight dark:text-white">
+                    Our <span class="gradient-text">Impact</span>
+                </h1>
+                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                    Explore real-world projects where we've delivered transformative digital solutions, driving measurable results and sustainable growth for our clients.
+                </p>
+            </div>
+        </section>
+
+        <!-- Portfolio Grid -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: Digital Marketing Campaign -->
+                <div class="group relative bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden transition-all duration-300 portfolio-card card-glow-secondary">
+                    <div class="aspect-video overflow-hidden bg-gradient-to-br from-secondary/20 to-accent/20">
+                        <img alt="Digital marketing campaign for Utah retail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm4nCDXqaQ9lXbTpZB7TKp6d-5hf6VGUVSazTiB9jXJpb23zUMiKU4rk1gdk_G8tbHWPfwNTcJ9h5gx0WIC3Ybdc8lN6kJGyD8YiLPGrBCXOZvEEvDaH3xWX9d9QTlGP79LXAuQab0hOdpkvdG9wr21myX5plTJVbSEdveFpIqx_FOL7InQXWqkWRuveUqUVBAJFATaiZHWClGn7h0">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-secondary mb-2 block">Digital Marketing</span>
+                        <h3 class="text-xl font-bold dark:text-white mb-2">Park City Luxury Retail Campaign</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">Comprehensive digital marketing strategy including SEO, social media, and paid advertising that increased foot traffic by 85%.</p>
+                        <div class="mb-4 space-y-2 text-xs text-slate-600 dark:text-slate-400">
+                            <div><strong>Results:</strong> 200% increase in online inquiries, $1.2M revenue impact</div>
+                        </div>
+                        <a class="text-primary text-sm font-semibold flex items-center gap-1 group/link cursor-pointer hover:gap-2 transition-all" href="#">
+                            View Case Study
+                            <span class="material-icons-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Custom ERP System -->
+                <div class="group relative bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden transition-all duration-300 portfolio-card card-glow-purple">
+                    <div class="aspect-video overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
+                        <img alt="Custom ERP software development" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-8ejfXFjEh-Tv1UG11RPoxnqqrvjgY3XZGtkylf-aXUV0hIns4wFbC3anYWCE-a4DAR_RA-mGjSvB_rKI-ZuFnbHJbYUzK0vTgKdFqCEFcvmHohHrLy16i5xYcVx_sW5q7gO5L8H8Yw5rr3kjKWXr8Grm8Itv6LR3NPvY41nTHV5mhUqTiPVNBvQbgfjm2KRfRXC-UcTDqEt1bgo1MtlmbvOQRjRriaTOubvDAmGJMZJxnwejAA_gUnBa_AcpmkF-HUSEAn7G-NM">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-primary mb-2 block">Custom Software</span>
+                        <h3 class="text-xl font-bold dark:text-white mb-2">Manufacturing ERP Solution</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">Custom ERP system integrating inventory, finance, and production management for a Utah manufacturing company.</p>
+                        <div class="mb-4 space-y-2 text-xs text-slate-600 dark:text-slate-400">
+                            <div><strong>Results:</strong> 40% reduction in operational costs, 60% faster order processing</div>
+                        </div>
+                        <a class="text-primary text-sm font-semibold flex items-center gap-1 group/link cursor-pointer hover:gap-2 transition-all" href="#">
+                            View Case Study
+                            <span class="material-icons-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Workflow Automation -->
+                <div class="group relative bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden transition-all duration-300 portfolio-card card-glow-cyan">
+                    <div class="aspect-video overflow-hidden bg-gradient-to-br from-accent/20 to-primary/20">
+                        <img alt="Healthcare intake automation workflow" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx-D-e_bGhl9sRRW6INgUwsLqST1iK2o3PBu2a9KLYTL7HJQ_7YbP94ApgI7nim7ByCaaemrdPiwj0umIZ_Kv4E_LIM9RjW8JW9BB0KBLcBj57V_B3cXF0JXA3KEaZAVhzomIKSD0fXA66-EjTiFBjQDmCYVdJyZs-yg8eVyVKSxsplgj80YMrXWNMDJ7W-pRQ_M-GEb9VOgyHlBqxf0I2o9jduGB-RVeMPR_ICKpz-VbXV3rdsreHw-5i4LkgpQptru6cL3h2W94">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-accent mb-2 block">Workflow Automation</span>
+                        <h3 class="text-xl font-bold dark:text-white mb-2">Healthcare Intake Automation</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">Automated patient intake system with HIPAA-compliant workflows reducing manual processing by 90%.</p>
+                        <div class="mb-4 space-y-2 text-xs text-slate-600 dark:text-slate-400">
+                            <div><strong>Results:</strong> 12 hours/week saved, 100% HIPAA compliant, 95% patient satisfaction</div>
+                        </div>
+                        <a class="text-primary text-sm font-semibold flex items-center gap-1 group/link cursor-pointer hover:gap-2 transition-all" href="#">
+                            View Case Study
+                            <span class="material-icons-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Web Application -->
+                <div class="group relative bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden transition-all duration-300 portfolio-card card-glow-cyan">
+                    <div class="aspect-video overflow-hidden bg-gradient-to-br from-accent/20 to-secondary/20">
+                        <img alt="SaaS platform for real estate management" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkxq4Q_mbdqMZizhlJlPihbLPVtjU-XOclrYSUvLPd14OeCMNSs1iKus_JNm0gbGGX_OqB7w_pHzSYX-16hw0VznhZcoxwh_5BUCn2sXnRiDYTl3H_103BEBrCOkNDViX7nFuFvh1GfwXCm22kXtMhClPH4Ga12r2D4xehFFZOUXoK1J3c7CHqbf81SZFFGyPiX0SsAxj5i8OWbmcoKhNVqNJuqnlZ3fr0VXziCz05I2klRG9h7utWlzXrw1Sn3CxeVe_J_O8-JOc">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-accent mb-2 block">Custom Software</span>
+                        <h3 class="text-xl font-bold dark:text-white mb-2">Real Estate Management Platform</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">Full-stack web application for property management enabling remote portfolio oversight and client communication.</p>
+                        <div class="mb-4 space-y-2 text-xs text-slate-600 dark:text-slate-400">
+                            <div><strong>Results:</strong> 300+ properties managed, $500K annual value</div>
+                        </div>
+                        <a class="text-primary text-sm font-semibold flex items-center gap-1 group/link cursor-pointer hover:gap-2 transition-all" href="#">
+                            View Case Study
+                            <span class="material-icons-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5: Email Marketing Campaign -->
+                <div class="group relative bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden transition-all duration-300 portfolio-card card-glow-purple">
+                    <div class="aspect-video overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20">
+                        <img alt="Email marketing automation system" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5w1dOJiTdoggx8SaVeluZUPJG6s3yQd4sYwx4-MpA-C6KHs-0B7FDaPA4F5xacRvb_Hk0jHNhv1IIlQRFAjPFnb3V195Kjqc-vfxjLiA_szXJb5nhfEUSLBrew2PDQnCMVoUy1SE0cLyxWffQZeAnqjk8ta8_8Skfao0qbguH9-IeiZt75PfYgxKjXzt3z93FS_4JaLVhD9aITXNfgGMDz3UftxiUxAkaEt7AKrqCwiUJpim1aTzzNQSJX8GK8O6hhImjv8NO-qg">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-primary mb-2 block">Digital Marketing</span>
+                        <h3 class="text-xl font-bold dark:text-white mb-2">B2B Email Marketing Automation</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">Multi-tier email nurture campaigns generating quality leads for a SaaS company serving construction industry.</p>
+                        <div class="mb-4 space-y-2 text-xs text-slate-600 dark:text-slate-400">
+                            <div><strong>Results:</strong> 35% open rate, $2.1M pipeline generated annually</div>
+                        </div>
+                        <a class="text-primary text-sm font-semibold flex items-center gap-1 group/link cursor-pointer hover:gap-2 transition-all" href="#">
+                            View Case Study
+                            <span class="material-icons-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6: Mobile App -->
+                <div class="group relative bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden transition-all duration-300 portfolio-card card-glow-pink">
+                    <div class="aspect-video overflow-hidden bg-gradient-to-br from-secondary/20 to-primary/20">
+                        <img alt="Field service mobile application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu4gRTJUvj52P-pJ9ok0x2YITB3uNhBn8ud7hCMnDNSq5YpAKV0NfPQECo4I6Ly7A4bIYngI_dDLez5Jep7TDKs7mNPRTUlt6OzQctm_LORxvPUIwxlptSrje64YlJK-Z7XctQyGpdEyNwhPsQcs3RvSQZDTYVkcHNVk6oPsE_MGL-w8L5CmW2-2fGpYJVp_RvAa0N4rASdrfJcryDOwpOsqgemUeUBkr-wF9kLgjzXotH31yfTZ-d7WGashD93vNsvBoPhwi-4jU">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-secondary mb-2 block">Custom Software</span>
+                        <h3 class="text-xl font-bold dark:text-white mb-2">Field Service Mobile App</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">Real-time field service tracking app for HVAC contractor improving job scheduling and customer communication.</p>
+                        <div class="mb-4 space-y-2 text-xs text-slate-600 dark:text-slate-400">
+                            <div><strong>Results:</strong> 25% faster job completion, 40% improved scheduling efficiency</div>
+                        </div>
+                        <a class="text-primary text-sm font-semibold flex items-center gap-1 group/link cursor-pointer hover:gap-2 transition-all" href="#">
+                            View Case Study
+                            <span class="material-icons-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="bg-slate-50 dark:bg-slate-950/50 py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl md:text-5xl font-black font-display mb-16 dark:text-white text-center">Our Track Record</h2>
+
+                <div class="grid md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-5xl font-black text-primary mb-2">50+</div>
+                        <div class="text-lg font-semibold text-slate-600 dark:text-slate-400">Projects Delivered</div>
+                    </div>
+                    <div>
+                        <div class="text-5xl font-black text-secondary mb-2">$15M+</div>
+                        <div class="text-lg font-semibold text-slate-600 dark:text-slate-400">Client Revenue Impact</div>
+                    </div>
+                    <div>
+                        <div class="text-5xl font-black text-accent mb-2">100%</div>
+                        <div class="text-lg font-semibold text-slate-600 dark:text-slate-400">Client Satisfaction</div>
+                    </div>
+                    <div>
+                        <div class="text-5xl font-black text-primary mb-2">10+</div>
+                        <div class="text-lg font-semibold text-slate-600 dark:text-slate-400">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl md:text-5xl font-black font-display mb-6 dark:text-white">Let's Create Your Success Story</h2>
+                <p class="text-xl text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto">
+                    Ready to join our growing list of satisfied clients? Let's discuss how we can help transform your business with proven digital solutions.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact.html" class="bg-gradient-to-r from-secondary to-primary text-white px-12 py-4 rounded-full font-bold text-lg hover:opacity-90 transition-all shadow-lg inline-flex items-center justify-center gap-2 cursor-pointer">
+                        Schedule Consultation
+                        <span class="material-icons-outlined">arrow_forward</span>
+                    </a>
+                    <a href="/services.html" class="bg-slate-100 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 px-12 py-4 rounded-full font-bold text-lg hover:border-primary transition-all inline-flex items-center justify-center gap-2 cursor-pointer">
+                        View All Services
+                        <span class="material-icons-outlined">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-white/10 pt-20 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="/assets/images/logo.svg" alt="Articulate Vision Logo" class="w-10 h-10">
+                        <div class="leading-tight">
+                            <div class="font-bold tracking-widest text-sm dark:text-white">ARTICULATE</div>
+                            <div class="text-[10px] tracking-[0.2em] text-slate-500 dark:text-slate-400">VISION</div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">
+                        Proven track record of delivering transformative digital solutions that drive measurable business results.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest dark:text-white mb-6">Navigation</h4>
+                    <ul class="space-y-4">
+                        <li><a href="/" class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm cursor-pointer">Home</a></li>
+                        <li><a href="/services.html" class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm cursor-pointer">Services</a></li>
+                        <li><a href="/portfolio.html" class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm cursor-pointer">Portfolio</a></li>
+                        <li><a href="/contact.html" class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm cursor-pointer">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest dark:text-white mb-6">Contact</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="tel:385-501-3212" class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors cursor-pointer">385-501-3212</a></li>
+                        <li><a href="mailto:contact@articulatevisionco.com" class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors cursor-pointer">contact@articulatevisionco.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-200 dark:border-white/10 text-center">
+                <p class="text-xs text-slate-500">© 2024 Articulate Vision. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
