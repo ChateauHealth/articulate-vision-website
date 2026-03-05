@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 99%;
+    --foreground: 215 14% 34%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 14% 34%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 14% 34%;
+    --primary: 263 70% 66%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 330 81% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 188 91% 43%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 263 70% 66%;
+    --radius: 0.5rem;
+    
+    --background-light: #fdfdfd;
+    --background-dark: #050505;
+  }
+
+  .dark {
+    --background: 0 0% 2%;
+    --foreground: 215 16% 80%;
+    --card: 215 28% 8%;
+    --card-foreground: 215 16% 80%;
+    --popover: 215 28% 8%;
+    --popover-foreground: 215 16% 80%;
+    --primary: 263 70% 66%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 330 81% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 188 91% 43%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 215 28% 15%;
+    --muted-foreground: 215 16% 60%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 263 70% 66%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(90deg, #ec4899, #8b5cf6, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-glow {
+    background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, rgba(5, 5, 5, 0) 70%);
+  }
+
+  .hero-glow-pink {
+    background: radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.15) 0%, rgba(5, 5, 5, 0) 70%);
+  }
+
+  .hero-glow-cyan {
+    background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.15) 0%, rgba(5, 5, 5, 0) 70%);
+  }
+
+  .nav-blur {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .card-hover-glow {
+    @apply transition-all duration-300;
+  }
+
+  .card-hover-glow:hover {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    border-color: rgba(139, 92, 246, 0.5);
+  }
+
+  .service-card {
+    @apply transition-all duration-300 cursor-pointer;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
+  }
+
+  .cta-button {
+    @apply transition-all duration-200;
+  }
+
+  .cta-button:hover {
+    opacity: 0.95;
+    box-shadow: 0 12px 24px rgba(139, 92, 246, 0.25);
+  }
+
+  .btn-secondary:hover {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+    border-color: rgba(139, 92, 246, 0.8);
+  }
+
+  .art-noise {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(139, 92, 246, 0.12) 0.5px, transparent 0.5px);
+    background-size: 18px 18px;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .art-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(140deg, rgba(236, 72, 153, 0.25), rgba(139, 92, 246, 0.12), rgba(6, 182, 212, 0.2));
+    pointer-events: none;
+  }
+
+  .art-grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(139, 92, 246, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6, 182, 212, 0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+
+  .art-dots {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(236, 72, 153, 0.18) 0.7px, transparent 0.7px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    opacity: 0.45;
+  }
+
+  .image-aura {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(145deg, rgba(236, 72, 153, 0.24), rgba(139, 92, 246, 0.12), rgba(6, 182, 212, 0.2));
+    pointer-events: none;
+  }
+
+  .portfolio-card {
+    @apply transition-all duration-300;
+  }
+
+  .portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card-hover-glow,
+    .service-card,
+    .cta-button,
+    .btn-secondary,
+    .portfolio-card {
+      transition: none;
+    }
+
+    .service-card:hover,
+    .portfolio-card:hover {
+      transform: none;
+    }
+  }
+}
