@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useTheme } from "next-themes"
 import { Sun, Moon, Menu, X, ArrowRight } from "lucide-react"
@@ -29,14 +30,15 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-secondary to-primary flex items-center justify-center transition-transform group-hover:scale-110">
-              <span className="text-white font-bold text-lg">AV</span>
-            </div>
-            <div className="leading-tight hidden sm:block">
-              <div className="font-bold tracking-widest text-sm dark:text-white">ARTICULATE</div>
-              <div className="text-[10px] tracking-[0.2em] text-muted-foreground">VISION</div>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/images/logo.webp"
+              alt="Articulate Vision"
+              width={200}
+              height={50}
+              className="h-10 w-auto transition-transform group-hover:scale-105"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

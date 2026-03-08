@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -7,14 +8,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-secondary to-primary flex items-center justify-center">
-                <span className="text-white font-bold text-lg">AV</span>
-              </div>
-              <div className="leading-tight">
-                <div className="font-bold tracking-widest text-sm dark:text-white">ARTICULATE</div>
-                <div className="text-[10px] tracking-[0.2em] text-muted-foreground">VISION</div>
-              </div>
+            <div className="mb-6">
+              <Image
+                src="/images/logo.webp"
+                alt="Articulate Vision"
+                width={200}
+                height={50}
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
               Leading digital agency in Salt Lake City empowering businesses with transformative
